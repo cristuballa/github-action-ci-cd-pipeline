@@ -1,0 +1,2 @@
+GET http://localhost:5107/WeatherForecast
+Content-Type: application/json
