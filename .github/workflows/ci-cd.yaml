@@ -5,7 +5,7 @@ on:
     branches: main
 
 jobs:
-  docker-image:
+  build:
     runs-on: ubuntu-latest
     steps:
 
@@ -25,7 +25,7 @@ jobs:
         run: dotnet Restore
 
       - name: Build application
-        run: dotnet publish -c Release --no-restore
+        run: dotnet build -c Release --no-restore
       
       - name: Run automated tests
         run:  dotnet test -c Release --no-build
@@ -36,6 +36,6 @@ jobs:
       - name: Deploy to Azure Web Apps
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 
-          publish-profile:
+          app-name: Web-Api-CI-CD-test
+          publish-profile: 
           package: ./out
