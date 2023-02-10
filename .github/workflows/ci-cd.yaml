@@ -24,8 +24,10 @@ jobs:
 
       - name: Restore dependencies 
         run: dotnet Restore
-
       
+      - name: Build Applicaton 
+        run: dotnet build src/web-api-test.csproj
+
       - name: Run automated tests
         run: dotnet test tests/tests.csproj  
 
