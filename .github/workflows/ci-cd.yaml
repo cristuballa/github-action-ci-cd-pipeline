@@ -26,14 +26,14 @@ jobs:
         run: dotnet Restore
 
       - name: Build Applicaton 
-        uses: DotNetCoreCLI@2
+        uses: actions/DotNetCoreCLI@2
         with:
           command: 'build'
           projects: 'src/web-api-test.csproj'
           arguments: '-c Release --no-restore'
       
       - name: Run automated tests
-        uses: DotNetCoreCLI@2
+        uses: actions/DotNetCoreCLI@2
         with:
           command: 'test'
           projects: ' tests\tests.csproj'
