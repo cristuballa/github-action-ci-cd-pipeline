@@ -26,17 +26,17 @@ jobs:
         run: dotnet Restore
 
       - name: Build Applicaton 
-        run: dotnet build src\web-api-test.csproj -c Release --no-restore  
+        run: dotnet build  -c Release --no-restore  
       
       - name: Run automated tests
-        run: dotnet test tests\tests.csproj  
+        run: dotnet test 
 
       - name : Publish application 
         run: dotnet publish -c Release -o ./out
 
-      - name: Deploy to Azure Web Apps
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: Web-Api-CI-CD-test
-          publish-profile: 
-          package: ./out
+      # - name: Deploy to Azure Web Apps
+      #   uses: azure/webapps-deploy@v2
+      #   with:
+      #     app-name: Web-Api-CI-CD-test
+      #     publish-profile: 
+      #     package: ./out
