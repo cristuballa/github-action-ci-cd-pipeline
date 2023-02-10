@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "T4WD4u8GVyi0lVftUxh8PsQCShnDs3wgOeLO+clXQi8=",
+  "Source": "web-api-test",
+  "BasePath": "_content/web-api-test",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

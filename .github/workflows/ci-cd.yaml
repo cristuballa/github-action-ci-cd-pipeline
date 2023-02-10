@@ -32,7 +32,7 @@ jobs:
         run: dotnet test tests/tests.csproj  
 
       - name : Publish application 
-        run: dotnet publish -c Release -o ./out
+        run: dotnet publish src/web-api-test.csproj -c Release -o ./out
 
       # - name: Deploy to Azure Web Apps
       #   uses: azure/webapps-deploy@v2
